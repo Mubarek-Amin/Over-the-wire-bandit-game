@@ -1,0 +1,20 @@
+#Level 7
+bandit6@bandit:~$ cd /
+bandit6@bandit:/$ ls
+behemoth           formulaone         libx32      opt                 srv
+bin                home               lost+found  proc                sys
+bin.usr-is-merged  krypton            manpage     root                tmp
+boot               lib                maze        run                 usr
+dev                lib32              media       sbin                utumno
+drifter            lib64              mnt         sbin.usr-is-merged  var
+etc                lib.usr-is-merged  narnia      snap                vortex
+bandit6@bandit:/$ find -user bandit7 -group bandit6 -size 33c 2>/dev/null
+./var/lib/dpkg/info/bandit7.password
+bandit6@bandit:/$ cd ./var/lib/dpkg/info/
+bandit6@bandit:/var/lib/dpkg/info$ cat bandit7.password
+morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+
+#The password is located on a file somewhere with the properties of being owned by user bandit7 , group bandit6 and is 33 bytes in size
+#We once again use the find command and list the properties
+#2>dev/null ignores all denied errors
+#We then read the file after changing into its directory
