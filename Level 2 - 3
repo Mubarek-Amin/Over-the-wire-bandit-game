@@ -1,0 +1,9 @@
+#Level 3
+bandit2@bandit:~$ ls
+--spaces in this filename--
+bandit2@bandit:~$ cat -- "--spaces in this filename--"
+MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
+
+#We used the same example as before but this time since theres a space the system would read each word as a file
+#One way to combat this is to encapsulate the whole file in quote marks and use -- to stop parsing flags and treat it as a filename only
+
