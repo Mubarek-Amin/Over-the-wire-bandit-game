@@ -1,0 +1,14 @@
+#Level 4
+
+bandit3@bandit:~$ ls
+inhere
+bandit3@bandit:~$ cd inhere
+bandit3@bandit:~/inhere$ ls
+bandit3@bandit:~/inhere$ ls -a
+.  ..  ...Hiding-From-You
+bandit3@bandit:~/inhere$ cat -- "...Hiding-From-You"
+2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
+
+#There is no file in our current directory but there is another directory so we us cd(change directory) to go into it
+#When we use ls, it does not list hidden files so you must use the optio -a to list all contents
+#And then the same method from previous levels to read similar files to the one above
