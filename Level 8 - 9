@@ -1,0 +1,9 @@
+#Level 9
+
+bandit8@bandit:~$ ls
+data.txt
+bandit8@bandit:~$ sort data.txt | uniq -u
+4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
+
+#We are told the password is the only unique line in the file
+#So we use the sort command to sort the text into consecutive lines and use the uniq -u command to output the only line that matches no others
