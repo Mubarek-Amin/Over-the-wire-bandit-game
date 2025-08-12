@@ -1,0 +1,9 @@
+#Level 8
+bandit7@bandit:~$ ls
+data.txt
+bandit7@bandit:~$ grep millionth data.txt
+millionth	dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+
+#We are told that the password is located next to the word millionth
+#So we use the grep command to find patterns and use the option millionth to find it
+#Also I would have posted the contents of the file but you really dont want to see it.(Its a million lines of code)
