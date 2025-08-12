@@ -1,0 +1,9 @@
+#Level 2
+bandit1@bandit:~$ ls
+-
+bandit1@bandit:~$ cat ./-
+263JGJPfgU6LtdEvgfWU1XP5yac29mFx
+
+#Because the file name is as such ,"-", we cannot use cat normally to read it as it would produce an error.
+#So "./" tells the system to look for the file in the current working directory only
+#There are other ways to read the file such as cat -- -
