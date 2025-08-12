@@ -1,0 +1,12 @@
+#Level 10
+
+bandit9@bandit:~$ ls
+data.txt
+bandit9@bandit:~$ strings data.txt | grep "=="
+========== the
+========== passwordb
+F========== is;o|
+U========== FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+
+#We are told the password is one of the few human readable strings in the file and preceded by "=="
+#So we use the strings command to find strings in the file followed by the grep command to look for strings that are preceded by "=="
