@@ -25,7 +25,12 @@ bandit13@bandit:/tmp/13$ ssh -i /tmp/13/sshkey.private bandit14@localhost -p 222
 
 Welcome to OverTheWire!
 
-
 bandit14@bandit:~$ 
+bandit14@bandit:~$ ls
+bandit14@bandit:~$ cd /etc/bandit_pass
+bandit14@bandit:/etc/bandit_pass$ cat bandit14
+MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
+
 #This one was fun.Instead of using a password you have to directly log in to ssh using a key provided
 #Use the ssh command with the private key and users name to login and bypass the password
+#Now we are in we can locate the password which can only be viewed by user bandit14 in the above directory
