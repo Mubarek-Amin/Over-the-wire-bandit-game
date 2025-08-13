@@ -1,1 +1,12 @@
 #Level 15
+
+bandit14@bandit:~$ telnet localhost 30000
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
+Correct!
+8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
+
+#We are told the password can be found by entering the current password on port 30000 on localhost
+#telnet command allows us to connect to a port
