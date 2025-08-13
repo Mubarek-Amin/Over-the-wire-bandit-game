@@ -1,0 +1,13 @@
+#Level 12
+
+bandit11@bandit:~$ ls
+data.txt
+bandit11@bandit:~$ cat data.txt
+Gur cnffjbeq vf 7k16JArUVv5LxVuJfsSVdbbtaHGlw9D4
+bandit11@bandit:~$ cat data.txt | tr "A-Za-z" "N-ZA-Mn-za-m"
+The password is 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
+
+#The file has been encoded by rot13 so to decode we must use tr.
+#tr is a command that translates one set to another.
+#So we use A-Z , a-z and translate it 13 letters ahead to N-Z, A-M , n-z, a-m
+#This decodes the text and outputs the password
