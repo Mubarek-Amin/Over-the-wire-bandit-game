@@ -1,0 +1,77 @@
+#Level 13
+#-------------------------------HUGE DISCLAIMER!!!------------------------------------------
+#This is very long so I'll put the explanation at the top.
+#This is a hex dump file which has been compressed way too many times.You have to decompress it by using various commands and moving it to a new file.
+#I used a temporary directory to work in.
+#Some useful commands will be listed below.
+#xxd -r will convert the hexdump into binary
+#tar -xf will extract from given file
+#gunzip will decompress the file which has been compressed by gzip
+#bunzip2 will do the same but for bzip2 files
+#file command will allow you to see what the file type is
+#Keep going and eventually you will reach ascii text which contains your password :)
+
+bandit12@bandit:~$ mktemp -d
+/tmp/tmp.lEevWRVk9g
+bandit12@bandit:~$ cp data.txt /tmp/tmp.lEevWRVk9g
+bandit12@bandit:~$ cd /tmp/tmp.lEevWRVk9g
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ ls
+data.txt
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ mv data.txt decode.txt
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ xxd -r decode.txt decode.bin
+-------------------------------------------------(Too long to print)
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ file decode.bin
+decode.bin: gzip compressed data, was "data2.bin", last modified: Mon Jul 28 19:03:32 2025, max compression, from Unix, original size modulo 2^32 578
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ mv decode.bin decode.gz
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ gunzip decode.gz
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ ls
+decode  decode.txt
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ file decode
+decode: bzip2 compressed data, block size = 900k
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ mv decode decode.bz2
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ ls
+decode.bz2  decode.txt
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ ls
+decode  decode.txt
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ file decode
+decode: gzip compressed data, was "data4.bin", last modified: Mon Jul 28 19:03:32 2025, max compression, from Unix, original size modulo 2^32 20480
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ mv decode decode.gz
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ gunzip decode
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ ls
+decode  decode.txt
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ file decode
+decode: POSIX tar archive (GNU)
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ mv decode decode.tar
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ tar -xf decode.tar
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ ls
+data5.bin  decode.tar  decode.txt
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ file data5.bin
+data5.bin: POSIX tar archive (GNU)
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ mv data5.bin data5.tar
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ tar -xf data5.tar
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ file data5.tar
+data5.tar: POSIX tar archive (GNU)
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ ls
+data5.tar  data6.bin  decode.tar  decode.txt
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ file data6.bin
+data6.bin: bzip2 compressed data, block size = 900k
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ mv data6.bin data6.bz2
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ bunzip2 data6.bz2
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ ls
+data5.tar  data6  decode.tar  decode.txt
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ file data6
+data6: POSIX tar archive (GNU)
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ mv data6 data6.tar
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ tar -xf data6.tar
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ ls
+data5.tar  data6.tar  data8.bin  decode.tar  decode.txt
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ file data8.bin
+data8.bin: gzip compressed data, was "data9.bin", last modified: Mon Jul 28 19:03:32 2025, max compression, from Unix, original size modulo 2^32 49
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ mv data8.bin data8.gz
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ gunzip data8.gz
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ ls
+data5.tar  data6.tar  data8  decode.tar  decode.txt
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ file data8
+data8: ASCII text
+bandit12@bandit:/tmp/tmp.lEevWRVk9g$ cat data8
+The password is FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
