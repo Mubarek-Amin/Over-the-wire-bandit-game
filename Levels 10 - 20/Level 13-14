@@ -1,0 +1,31 @@
+#Level 14
+
+bandit13@bandit:~$ ls
+sshkey.private
+bandit13@bandit:~$ mkdir /tmp/13
+bandit13@bandit:~$ cp sshkey.private /tmp/13
+bandit13@bandit:~$ cd /tmp/13
+bandit13@bandit:/tmp/13$ chmod 600 sshkey.private
+bandit13@bandit:/tmp/13$ ssh -i /tmp/13/sshkey.private bandit14@localhost -p 2220
+
+      ,----..            ,----,          .---.
+     /   /   \         ,/   .`|         /. ./|
+    /   .     :      ,`   .'  :     .--'.  ' ;
+   .   /   ;.  \   ;    ;     /    /__./ \ : |
+  .   ;   /  ` ; .'___,/    ,' .--'.  '   \' .
+  ;   |  ; \ ; | |    :     | /___/ \ |    ' '
+  |   :  | ; | ' ;    |.';  ; ;   \  \;      :
+  .   |  ' ' ' : `----'  |  |  \   ;  `      |
+  '   ;  \; /  |     '   :  ;   .   \    .\  ;
+   \   \  ',  /      |   |  '    \   \   ' \ |
+    ;   :    /       '   :  |     :   '  |--"
+     \   \ .'        ;   |.'       \   \ ;
+  www. `---` ver     '---' he       '---" ire.org
+
+
+Welcome to OverTheWire!
+
+
+bandit14@bandit:~$ 
+#This one was fun.Instead of using a password you have to directly log in to ssh using a key provided
+#Use the ssh command with the private key and users name to login and bypass the password
