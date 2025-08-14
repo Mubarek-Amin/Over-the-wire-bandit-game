@@ -1,0 +1,18 @@
+#Level 19
+
+ssh bandit18@bandit.labs.overthewire.org -p 2220 cat "~/readme"
+                         _                     _ _ _   
+                        | |__   __ _ _ __   __| (_) |_ 
+                        | '_ \ / _` | '_ \ / _` | | __|
+                        | |_) | (_| | | | | (_| | | |_ 
+                        |_.__/ \__,_|_| |_|\__,_|_|\__|
+                                                       
+
+                      This is an OverTheWire game server. 
+            More information on http://www.overthewire.org/wargames
+
+bandit18@bandit.labs.overthewire.org's password: 
+cGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8
+
+#We are told the password is stored in the home directory of bandit18 called readme but we are instanstly booted out of the server
+#So we use cat to read the file in the same line as the ssh
