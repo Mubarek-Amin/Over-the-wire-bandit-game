@@ -5,5 +5,6 @@ bandit15@bandit:~$ openssl s_client -connect localhost:30001
 Correct!
 kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx
 
-#openssl is a toolkit for ssl/tsl
-#ssl/tsl is a
+#openssl is a toolkit for ssl/tsl which encrypts data over a network
+#s_client is a specific mode of this which acts as a client for ssl/tsl
+#we connect to the localhost on port 30001 as given per otw
