@@ -1,1 +1,11 @@
 #Level 20
+
+bandit19@bandit:~$ ls -l
+total 16
+-rwsr-x--- 1 bandit20 bandit19 14884 Jul 28 19:03 bandit20-do
+bandit19@bandit:~$ ./bandit20-do cat /etc/bandit_pass/bandit20
+0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO
+
+#ls -l lists the permissions user groups and others has
+#in this case instead of execute the user has set user id on execution permission
+#we can use this to read the password for bandit20 by setting our userid to bandit 20
