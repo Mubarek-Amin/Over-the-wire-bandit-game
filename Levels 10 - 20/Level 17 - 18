@@ -1,4 +1,5 @@
 #Level 18
+
 bandit17@bandit:~$ ls
 passwords.new  passwords.old
 bandit17@bandit:~$ diff passwords.old passwords.new
@@ -6,3 +7,7 @@ bandit17@bandit:~$ diff passwords.old passwords.new
 < Vhc9EKhF5JOIiQsrq2hjyvDaALKaGKCh
 ---
 > x2gLTTjFwMOhQ8oWNbMN362QKxfRqGlO
+
+#We are told there are two files and the passwords.new has the password
+#Both files are identical apart from the real password
+#diff command shows the difference between the files
